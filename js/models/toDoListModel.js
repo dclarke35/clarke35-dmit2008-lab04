@@ -6,7 +6,6 @@ let observers = []
 
 export function subscribe(fn){
     observers.push(fn)
-    console.log(observers)
 }
 
 export function notify(data){
@@ -51,6 +50,8 @@ export function addToDo(newToDo){
 
     const newUid = newToDoRef.key
     payload.uid = newUid
+    console.log(payload)
+    
     const store = updateStore(payload)
     notify(store)
 }

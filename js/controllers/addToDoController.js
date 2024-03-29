@@ -35,14 +35,6 @@ function onCreateToDoItem(e){
     const start = date
     const finish = e.currentTarget.finish.value
 
-    let temp = {
-        todo,
-        category,
-        status,
-        start,
-        finish,
-    }
-
     addToDo ({
         todo,
         category,
@@ -50,8 +42,6 @@ function onCreateToDoItem(e){
         start,
         finish,
     })
-
-    console.log(temp)
 
     form.reset()
 }
