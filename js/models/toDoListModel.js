@@ -45,7 +45,12 @@ export function updateToDo(updatedToDo){
 
 export function addToDo(newToDo){
     let payload = newToDo
-    db.set(payload)
-    const store = createStore(payload)
+    const dbRef = ref(db, 'todos')
+    const newToDoRef = push(dbRef)
+    set(newToDoRef, newToDo)
+
+    const newUid = newToDoRef.key
+    payload.uid = newUid
+    const store = updateStore(payload)
     notify(store)
 }

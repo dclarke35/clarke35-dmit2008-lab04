@@ -10,8 +10,8 @@ const date = new Date().toJSON().slice(0, 10)
 
 export function addToDoController(){
     dialog = document.querySelector('#create-to-do')
-    exitButton = document.querySelector('#exit')
-    closeButton = document.querySelector('#close')
+    exitButton = dialog.querySelector('#exit')
+    closeButton = dialog.querySelector('#close')
     form = dialog.querySelector('form')
     configureListeners()
     dialog.showModal()
@@ -43,13 +43,13 @@ function onCreateToDoItem(e){
         finish,
     }
 
-    // createToDo ({
-    //     todo,
-    //     category,
-    //     status,
-    //     start,
-    //     finish,
-    // })
+    addToDo ({
+        todo,
+        category,
+        status,
+        start,
+        finish,
+    })
 
     console.log(temp)
 

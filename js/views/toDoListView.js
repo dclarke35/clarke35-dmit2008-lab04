@@ -31,12 +31,10 @@ function onHandleClick(e){
             deleteToDoController(e.target.dataset.uid)
             break
         case 'edit':
-            console.log(e.target.dataset.uid)
             updateToDoController(e.target.dataset.uid)
             break
         case 'add':
-            console.log(e.target.dataset.uid)
-            addToDoController(e.target.dataset.uid)
+            addToDoController()
             break
         default:
             null
